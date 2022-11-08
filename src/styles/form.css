@@ -1,0 +1,68 @@
+form {
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+label, input {
+  display: block;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  font: inherit;
+  border: 1px solid #ccc;
+  padding: 0.25rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-buttons {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  width: 48%;
+}
+
+.form-buttons button:first-child {
+  background-color: white;
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.form-buttons button:first-child:disabled {
+  background-color: white;
+  border-color: var(--danger-desaturated);
+  color: var(--danger-desaturated);
+}
+
+.form-buttons button:first-child:not(:disabled):hover {
+  border-color: var(--danger-light);
+  color: var(--danger-light);
+  background-color: var(--danger-bg);
+}
+
+@media screen and (min-width: 575px) {
+  .form-buttons {
+    width: 80%;
+  }
+
+  .form-buttons button {
+    width: 10rem;
+  }
+}

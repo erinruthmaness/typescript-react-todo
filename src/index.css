@@ -1,3 +1,13 @@
+:root {
+  --primary: rgb(81, 0, 92);
+  --primary-light: rgb(105, 10, 117);
+  --primary-desaturated: rgb(105, 10, 117, 50%);
+  --danger: rgb(143, 0, 0);
+  --danger-light: rgb(164, 14, 14);
+  --danger-desaturated: rgba(164, 14, 14, 50%);
+  --danger-bg: rgba(164, 14, 14, 10%);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,4 +15,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled {
+  background: var(--primary-desaturated);
+  border-color: var(--primary-desaturated);
+  color: lightgray;
+  cursor: default;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:not(:disabled):hover,
+button:active {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
 }
